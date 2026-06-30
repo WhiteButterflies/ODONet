@@ -1,0 +1,10 @@
+/checkpoints/
+/pretrained/
+/tensorboard/
+/.stfolder/
+/vis/
+/external/vot20/OSTrackSTS/sequences/
+/external/vot20/OSTrackSTS/results/
+/external/AR_VOT20/checkpoints/ltr/ARcm_seg/baseline_plus_got_lasot/
+/logs/
+/mixstyle-release-master

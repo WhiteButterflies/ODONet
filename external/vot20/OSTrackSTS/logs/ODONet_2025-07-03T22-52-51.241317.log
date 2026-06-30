@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/data1/lqh/miniconda3/envs/MCITrack/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/data1/lqh/miniconda3/envs/MCITrack/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/ODONet.py", line 12, in <module>
+    from stark_alpha_seg_class import run_vot_exp
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/stark_alpha_seg_class.py", line 13, in <module>
+    from pytracking.ARcm_seg import ARcm_seg
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../pytracking/ARcm_seg.py", line 7, in <module>
+    from .utils.loading import load_network
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../pytracking/utils/loading.py", line 3, in <module>
+    from pytracking.evaluation.environment import env_settings
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../pytracking/evaluation/__init__.py", line 1, in <module>
+    from .data import Sequence
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../pytracking/evaluation/data.py", line 3, in <module>
+    from ltr.data.image_loader import imread_indexed
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../ltr/data/__init__.py", line 1, in <module>
+    from .loader import LTRLoader
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../ltr/data/loader.py", line 5, in <module>
+    from torch._six import string_classes
+ModuleNotFoundError: No module named 'torch._six'
+Process not alive anymore, unable to retrieve return code

@@ -1,0 +1,16 @@
+no tensorrt installed
+no tensorrt installed
+no tensorrt installed
+Traceback (most recent call last):
+  File "/data1/lqh/miniconda3/envs/MCITrack/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/data1/lqh/miniconda3/envs/MCITrack/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/ODONet.py", line 12, in <module>
+    from stark_alpha_seg_class import run_vot_exp
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/stark_alpha_seg_class.py", line 13, in <module>
+    from pytracking.ARcm_seg import ARcm_seg
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../pytracking/ARcm_seg.py", line 22, in <module>
+    from ltr.data.processing_utils_SE import sample_target_SE, transform_image_to_crop_SE, map_mask_back
+ModuleNotFoundError: No module named 'ltr.data.processing_utils_SE'
+Process not alive anymore, unable to retrieve return code

@@ -1,0 +1,39 @@
+no tensorrt installed
+no tensorrt installed
+no tensorrt installed
+/data1/lqh/miniconda3/envs/MCITrack/lib/python3.10/site-packages/timm/models/registry.py:4: FutureWarning: Importing from timm.models.registry is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/data1/lqh/miniconda3/envs/MCITrack/lib/python3.10/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+test config:  {'MODEL': {'ENCODER': {'TYPE': 'fastitpnb', 'DROP_PATH': 0.1, 'PRETRAIN_TYPE': '/pretrained/fast_itpn_base_clipl_e1600.pt', 'USE_CHECKPOINT': False, 'STRIDE': 16, 'POS_TYPE': 'index', 'TOKEN_TYPE_INDICATE': True, 'INTERACTION_INDEXES': [[8, 14], [14, 20], [20, 26], [26, 32]], 'DEFORM_INDEXES': [2], 'GRAD_CKPT': True}, 'NECK': {'N_LAYERS': 4, 'D_MODEL': 512, 'D_STATE': 16}, 'DECODER': {'TYPE': 'CENTER', 'NUM_CHANNELS': 256}}, 'TRAIN': {'LR': 0.0004, 'WEIGHT_DECAY': 0.0001, 'EPOCH': 300, 'LR_DROP_EPOCH': 240, 'BATCH_SIZE': 64, 'NUM_WORKER': 10, 'OPTIMIZER': 'ADAMW', 'ENCODER_MULTIPLIER': 0.1, 'FREEZE_ENCODER': False, 'ENCODER_OPEN': [], 'CE_WEIGHT': 1.0, 'GIOU_WEIGHT': 2.0, 'L1_WEIGHT': 5.0, 'OFFSET_L1_WEIGHT': 1.0, 'OFFSET_COSINE_WEIGHT': 1.0, 'SIMCLR_WEIGHT': 1.0, 'PRINT_INTERVAL': 50, 'VAL_EPOCH_INTERVAL': 1, 'GRAD_CLIP_NORM': 0.1, 'FIX_BN': False, 'ENCODER_W': '', 'SCHEDULER': {'TYPE': 'step', 'DECAY_RATE': 0.1}, 'TYPE': 'normal', 'PRETRAINED_PATH': None}, 'DATA': {'MEAN': [0.485, 0.456, 0.406], 'STD': [0.229, 0.224, 0.225], 'MAX_SAMPLE_INTERVAL': 400, 'SAMPLER_MODE': 'order', 'LOADER': 'tracking', 'TRAIN': {'DATASETS_NAME': ['LASOT', 'GOT10K_vottrain', 'COCO17', 'TRACKINGNET', 'VASTTRACK'], 'DATASETS_RATIO': [1, 1, 1, 1, 1], 'SAMPLE_PER_EPOCH': 60000}, 'VAL': {'DATASETS_NAME': ['GOT10K_votval'], 'DATASETS_RATIO': [1], 'SAMPLE_PER_EPOCH': 500}, 'SEARCHES': 3, 'SEARCHES_PREDICT': 2, 'SEARCH': {'NUMBER': 2, 'SIZE': 224, 'FACTOR': 4.0, 'CENTER_JITTER': 3.5, 'SCALE_JITTER': 0.5}, 'TEMPLATE': {'NUMBER': 5, 'SIZE': 112, 'FACTOR': 2.0, 'CENTER_JITTER': 0, 'SCALE_JITTER': 0}}, 'TEST': {'TEMPLATE_FACTOR': 2.0, 'TEMPLATE_SIZE': 112, 'SEARCH_FACTOR': 4.0, 'SEARCH_SIZE': 224, 'EPOCH': 300, 'WINDOW': True, 'NUM_TEMPLATES': 5, 'UPT': {'DEFAULT': 1, 'LASOT': 0.8, 'LASOT_EXTENSION_SUBSET': 0.85, 'TRACKINGNET': 0.5, 'TNL2K': 0.75, 'NFS': 0.8, 'UAV': 0.2, 'VOT20': 0.4, 'GOT10K_TEST': 0}, 'UPH': {'DEFAULT': 1, 'LASOT': 0.88, 'LASOT_EXTENSION_SUBSET': 0.97, 'TRACKINGNET': 0.9, 'TNL2K': 0.9, 'NFS': 0.92, 'UAV': 0.91, 'VOT20': 0.94, 'GOT10K_TEST': 0}, 'INTER': {'DEFAULT': 999999, 'LASOT': 70, 'LASOT_EXTENSION_SUBSET': 50, 'TRACKINGNET': 20, 'TNL2K': 20, 'NFS': 90, 'UAV': 1, 'VOT20': 1, 'GOT10K_TEST': 0}, 'MB': {'DEFAULT': 500, 'LASOT': 500, 'LASOT_EXTENSION_SUBSET': 500, 'TRACKINGNET': 200, 'TNL2K': 500, 'NFS': 500, 'UAV': 400, 'VOT20': 500, 'GOT10K_TEST': 0}}}
+Traceback (most recent call last):
+  File "/data1/lqh/miniconda3/envs/MCITrack/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/data1/lqh/miniconda3/envs/MCITrack/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/ODONet.py", line 15, in <module>
+    run_vot_exp('mcitrack_h_deform_online_v5', 'mcitrack_b224', 'baseline_plus_got_lasot', 0.40, VIS=False, trt='false')
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/stark_alpha_seg_class.py", line 102, in run_vot_exp
+    tracker = STARK_ALPHA_SEG(tracker_name=tracker_name, para_name=para_name,
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/stark_alpha_seg_class.py", line 62, in __init__
+    self.stark = tracker_info.create_tracker(params)
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../../../lib/test/evaluation/tracker.py", line 66, in create_tracker
+    tracker = self.tracker_class(params, self.dataset_name)
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../../../lib/test/tracker/mcitrack_h_deform_online_v5.py", line 19, in __init__
+    network = build_mcitrack(params.cfg)
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../../../lib/models/mcitrack_h_deform_online_v5/mcitrack.py", line 212, in build_mcitrack
+    encoder = build_encoder(cfg)
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../../../lib/models/mcitrack_h_deform_online_v5/encoder.py", line 82, in build_encoder
+    encoder = Encoder(cfg.MODEL.ENCODER.TYPE, train_encoder,
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../../../lib/models/mcitrack_h_deform_online_v5/encoder.py", line 49, in __init__
+    encoder = getattr(fastitpn_module, name)(
+  File "/data2/lqh/workspace_pycharm/MCITrack/external/AR_VOT20/pytracking/VOT2020/../../../../lib/models/mcitrack_h_deform_online_v5/fastitpn.py", line 1131, in fastitpnb
+    checkpoint = torch.load(pretrain_path, map_location="cpu")
+  File "/data1/lqh/miniconda3/envs/MCITrack/lib/python3.10/site-packages/torch/serialization.py", line 1479, in load
+    with _open_file_like(f, "rb") as opened_file:
+  File "/data1/lqh/miniconda3/envs/MCITrack/lib/python3.10/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/data1/lqh/miniconda3/envs/MCITrack/lib/python3.10/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmpfn_w3nnl/pretrained/fast_itpn_base_clipl_e1600.pt'
+Process not alive anymore, unable to retrieve return code

@@ -1,0 +1,66 @@
+results_dir: experiments/tokenizer
+cloud_save_path: experiments/tokenizer
+compile: False 
+global_seed: 42
+log_every: 50
+vis_every: 100
+ckpt_every: 4500
+mixed_precision: bf16
+no_local_save: True
+
+dataset: imagenet
+data_path: /data2/lqh/data/lasot_vqvae/
+image_size: 256
+
+vq_model: SoftVQ
+tau: 0.07
+ema: True 
+num_codebooks: 4
+codebook_size: 8192
+codebook_embed_dim: 32
+entropy_loss_ratio: 0.01
+vq_loss_ratio: 0.0 
+commit_loss_beta: 0.0
+reconstruction_weight: 1.0
+perceptual_weight: 1.0
+perceptual_warmup: 10000
+disc_weight: 0.2
+use_diff_aug: True 
+disc_cr_loss_weight: 4.0
+disc_start: 20000
+disc_type: dino
+disc_loss: hinge
+gen_loss: hinge
+lecam_loss_weight: 0.001
+
+enc_type: vit
+encoder_model: vit_base_patch14_dinov2.lvd142m
+encoder_pretrained: True
+encoder_patch_size: 16
+encoder_tuning_method: full
+dec_type: vit
+decoder_model: vit_base_patch14_dinov2.lvd142m
+decoder_pretrained: False 
+decoder_patch_size: 16
+decoder_tuning_method: full
+num_latent_tokens: 64
+
+repa: True
+repa_model: vit_base_patch14_dinov2.lvd142m
+repa_patch_size: 16
+repa_proj_dim: 1024
+repa_loss_weight: 0.1
+repa_align: repeat
+
+epochs: 100 #ori=50
+lr: 1.0e-4
+optim: adamw
+lr_scheduler: cosine
+weight_decay: 0.0001
+beta1: 0.9
+beta2: 0.95
+max_grad_norm: 1.0
+global_batch_size: 128  # ori 256,Lasot 128
+
+
+

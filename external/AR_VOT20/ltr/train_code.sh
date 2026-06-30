@@ -1,0 +1,21 @@
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py SEbb SEbb_LB_UF_L3_MG_mean
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py SEmask SEmask
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py SEcorner SEcorner
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py SEbcm SEbcm
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py SEbc SEbc
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py bbreg atom_new
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py dimp dimp50_baseline_MG_LB
+# vot2020
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py AR ARcm
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py AR ARcm_coco
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py dimp dimp101_baseline
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py ARcm_seg ARcm_coco_seg
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py ARcm_seg ARcm_coco_seg101
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py ARcm_seg ARcm_coco_seg_resnest101
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py ARcm_seg ARcm_coco_seg_resnest50
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py ARcm_seg ARcm_coco_seg_SGD
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py ARcm_seg ARcm_coco_seg_only_mask
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py ARcm_seg ARcm_coco_seg_only_mask_384
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py ARcm_seg ARcm_coco_seg_dtm
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py ARcm_seg ARcm_coco_seg_dtm_384
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 run_training_multigpu.py ARcm_seg ARcm_coco_seg_davis
