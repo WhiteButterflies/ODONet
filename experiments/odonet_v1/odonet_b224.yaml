@@ -38,7 +38,7 @@ MODEL:
   ENCODER:
     TYPE: fastitpnb
     STRIDE: 16
-    PRETRAIN_TYPE: '/pretrained/fast_itpn_base_clipl_e1600.pt'
+    PRETRAIN_TYPE: 'pretrained/fast_itpn_base_clipl_e1600.pt'
     DROP_PATH: 0.1
     POS_TYPE: index # index or interpolate
     TOKEN_TYPE_INDICATE: True

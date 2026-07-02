@@ -1091,7 +1091,7 @@ def fastitpnt(pretrained=False, pos_type="interpolate", pretrain_type="", **kwar
         pos_type=pos_type,
         **kwargs)
     model.default_cfg = _cfg()
-    pretrain_path = current_file_path + pretrain_type
+    pretrain_path = os.path.join(current_file_path ,pretrain_type)
     if pretrained:
         checkpoint = torch.load(pretrain_path, map_location="cpu")
         load_pretrained(model,checkpoint,pos_type)
@@ -1109,7 +1109,7 @@ def fastitpns(pretrained=False, pos_type="interpolate", pretrain_type="", **kwar
         pos_type=pos_type,
         **kwargs)
     model.default_cfg = _cfg()
-    pretrain_path = current_file_path +  pretrain_type
+    pretrain_path = os.path.join(current_file_path ,pretrain_type)
     if pretrained:
         checkpoint = torch.load(pretrain_path, map_location="cpu")
         load_pretrained(model,checkpoint,pos_type)
@@ -1126,8 +1126,7 @@ def fastitpnb(pretrained=False,pos_type="interpolate",pretrain_type="",**kwargs)
         pos_type = pos_type,
         **kwargs)
     model.default_cfg = _cfg()
-    # pretrain_path = current_file_path + pretrain_type
-    pretrain_path = '/data2/lqh/workspace_pycharm/MCITrack/pretrained/fast_itpn_base_clipl_e1600.pt'
+    pretrain_path = os.path.join(current_file_path ,pretrain_type)
     if pretrained:
         checkpoint = torch.load(pretrain_path, map_location="cpu")
         load_pretrained(model,checkpoint,pos_type)
@@ -1146,7 +1145,7 @@ def fastitpnl(pretrained=False,pos_type="interpolate",pretrain_type="", **kwargs
         pos_type="interpolate",
         **kwargs)
     model.default_cfg = _cfg()
-    pretrain_path = current_file_path + pretrain_type
+    pretrain_path = os.path.join(current_file_path, pretrain_type)
     if pretrained:
         checkpoint = torch.load(pretrain_path, map_location="cpu")
         load_pretrained(model,checkpoint,pos_type)
